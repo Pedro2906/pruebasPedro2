@@ -4,9 +4,9 @@ $seguir = $_REQUEST['seguir'];
 if ($seguir == 'sii') {
 
 	$emp_codigoC = $_REQUEST['empresa'];
-	require 'PHPMailer-master/class.phpmailer.php';
+	//require 'PHPMailer-master/class.phpmailer.php';
 
-	require ('bd.php');
+	//require ('bd.php');
 	// conecta INFORMIX
 	include ('cargaArchTXT.php');
 	require ('/var/www/html/control/bd/bdcl.php');
