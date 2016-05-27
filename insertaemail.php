@@ -4,9 +4,8 @@ $seguir = $_REQUEST['seguir'];
 if ($seguir == 'sii') {
 
 	$emp_codigoC = $_REQUEST['empresa'];
-	//require 'PHPMailer-master/class.phpmailer.php';
-
-	//require ('bd.php');
+	require 'PHPMailer-master/class.phpmailer.php';
+	require ('bd.php');
 	// conecta INFORMIX
 	include ('cargaArchTXT.php');
 	require ('/var/www/html/control/bd/bdcl.php');
@@ -20,7 +19,7 @@ if ($seguir == 'sii') {
 		$emailAr = trim($linel);
 		$fila = $fila + 1;
 		$inserta = pg_exec($dbc, "INSERT INTO clientemail (email) VALUES('$emailAr')");
-		include ('IFXsql.php');
+		//include ('IFXsql.php');
 	}
 }
 ?>
